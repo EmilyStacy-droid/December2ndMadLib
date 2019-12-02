@@ -20,3 +20,13 @@
 .App-link {
   color: #09d3ac;
 }
+
+.line-height {
+  line-height: 1.5
+}
+
+#result {
+  border:1px solid grey;
+  margin:30px;
+  padding:5px;
+}

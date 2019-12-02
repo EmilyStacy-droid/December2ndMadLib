@@ -1,6 +1,6 @@
 import React from 'react';
+import {MadLibresult} from './MadLibresult';
 import {Link, Redirect} from 'react-router-dom';
-import {madLibresult} from './madLibresult.jsx';
 export class madlibForm extends React.Component {
     state ={
         firstAdj: '',
@@ -12,8 +12,11 @@ export class madlibForm extends React.Component {
     
 };
 
+
     render() {
         return <>
+            {this.state.isClicked==true?<MadLibresult results={this.state}/>:null}
+             {/* <MadLibresult style={{"display":this.state.isClicked==true?"block":"none"}} results = {this.state} />  */}
             <form className="container">
 
             <div className = "form-group">
@@ -86,30 +89,6 @@ export class madlibForm extends React.Component {
             </form>
 
             
-
-            <div class="container mt-2" style={{"display":this.state.isClicked==true?"block":"none"}}>
-                    <p class="h6">
-                    You felt <span class="badge badge-secondary">{this.state.firstAdj}</span> while checking the baby Yoda meme on a Saturday morning.
-                   </p>
-
-                    <p class="h6">
-                    While you took a break from the memes, <span class="badge badge-secondary">{this.state.firstVerb}</span> and thinking about the importance of memes in your life, 
-                    you got an email from Tim.</p>
-                    
-                    <p class="h6">
-                    In the email Tim said you did a/an <span class="badge badge-secondary"> {this.state.secondAdj}</span> job on your UNO project and he wanted to talk to you on Monday. 
-                    </p>   
-
-                    <p class="h6">
-                    On Monday, you walked <span class="badge badge-secondary">{this.state.firstAdv}</span> into Tim’s office. It turned out Tim just wanted to give you a birthday surprise and invited you to play a UNO game.    
-                    </p> 
-
-                    <p class="h6">
-
-                    After the UNO project you had a complicated feeling about the UNO game, so you could not help but <span class="badge badge-secondary">{this.state.secondVerb}</span> the UNO cards in front of him.
-                    </p>
-                </div>
-             <madLibresult results = {this.state}/> 
         </>
     }
 

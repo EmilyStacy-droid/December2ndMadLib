@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, Redirect} from 'react-router-dom';
-import {madLibresult} from './madLibresult';
+import {madLibresult} from './madLibresult.jsx';
 export class madlibForm extends React.Component {
     state ={
         firstAdj: '',
@@ -109,7 +109,7 @@ export class madlibForm extends React.Component {
                     After the UNO project you had a complicated feeling about the UNO game, so you could not help but <span class="badge badge-secondary">{this.state.secondVerb}</span> the UNO cards in front of him.
                     </p>
                 </div>
-            {/* <madLibresult results = {this.state.result}/> */}
+             <madLibresult results = {this.state}/> 
         </>
     }
 
